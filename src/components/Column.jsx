@@ -42,7 +42,8 @@ const Column = ({ droppableId, title, cardList, createNewTicket, showInputCard, 
         title: {
             fontWeight: 600,
             marginTop: 'auto',
-            marginBottom: 'auto'
+            marginBottom: 'auto',
+            color:'#161616'
         }
     }
 

@@ -49,7 +49,7 @@ const CustomCard = ({ droppableId, item, index, updateTicket }) => {
               onClick={() => { setShowModal(true); setTitle(item.title); setDescription(item.description) }}
             >
               <Card.Body>
-                <h5 style={{ fontSize: 16, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', }}>{item.title}</h5>
+                <h5 style={{ fontSize: 16, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',color:'#161616' }}>{item.title}</h5>
                 <p style={{ color: '#868686', textAlign: 'justify', textJustify: 'inter-word', fontSize: 14 }}>
                   {item.description}
                 </p>

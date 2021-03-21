@@ -201,7 +201,7 @@ const LandingPage = () => {
                             <Column
                                 cardList={state.todo}
                                 droppableId={"todo"}
-                                title={"To do"}
+                                title={"To Do"}
                                 createNewTicket={createNewTicket}
                                 showInputCard={showInputCard}
                                 setShowInputCard={setShowInputCard}
