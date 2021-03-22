@@ -72,6 +72,13 @@ const LandingPage = () => {
     };
 
     const firestoreSync = (updatedState) => {
+
+        //restrict updation for the user account
+        const user = firebase.auth().currentUser
+        if(user.email==='demo@linkedin.com'){
+            return
+        }
+        
         setIsLoading(true)
         firebase.firestore()
             .collection(userID)
