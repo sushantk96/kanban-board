@@ -173,7 +173,16 @@ const Login = (props) => {
             onComplete: () => setShowSignup(false)
         })
     }
-
+    const loginAsGuest = () => {
+        setIsLoading(true)
+        firebase
+            .auth()
+            .signInWithEmailAndPassword('demo@linkedin.com', 'Admin@123')
+            .then(() => {
+                props.history.push('/LandingPage')
+                setIsLoading(false)
+            })
+    }
     return (
         <div style={style.container}>
 
@@ -225,6 +234,12 @@ const Login = (props) => {
                                 {isLoading ?
                                     <box-icon name='loader-circle' animation='spin' flip='vertical' color='white' ></box-icon> :
                                     showSignup ? <h6 style={style.btnText}>Sign up</h6> : <h6 style={style.btnText}>Login</h6>
+                                }
+                            </Button>
+                            <Button variant="light" style={style.loginBtn} onClick={loginAsGuest} disabled={isLoading}>
+                                {isLoading ?
+                                    <box-icon name='loader-circle' animation='spin' flip='vertical' color='white' ></box-icon> :
+                                    <h6 style={style.btnText}>Login as Guest</h6>
                                 }
                             </Button>
                             {showSignup ?
